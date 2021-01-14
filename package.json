@@ -1,0 +1,12 @@
+{
+  "name": "bot-cleaning-linkedin",
+  "version": "1.0.0",
+  "description": "A tiny bot in cypress to clean your contacts in linkedin",
+  "main": "index.js",
+  "repository": "git@github.com:RubenZagon/bot-cleaning-in.git",
+  "author": "Rubén Zagon <ruben.zagon@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^6.2.1"
+  }
+}
