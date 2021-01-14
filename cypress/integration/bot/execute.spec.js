@@ -22,7 +22,14 @@ context('Limpando...', () => {
 
         // Cerramos el chat
         cy.wait(5000)
-        cy.get('#ember549').click()
+        cy.get('.msg-overlay-bubble-header').click("center")
+
+        // Presionamos sobre el botón de más opciones para eliminar
+        cy.wait(5000)
+        cy.get('.artdeco-button--circle').click({multiple:true, force:true} )
+
+        // Pasamos a eliminar el contacto
+        cy.get('button').contains('Eliminar').click()
 
     })
 })
