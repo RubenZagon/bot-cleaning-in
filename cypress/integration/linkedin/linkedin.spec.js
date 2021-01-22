@@ -25,6 +25,18 @@ context('Actions', () => {
         cy.wait(5000)
         cy.get('.msg-overlay-bubble-header').click('center')
 
-        /*Antes de ponerse a eliminar usuarios, busca un conejillo de indias*/
+        // Bucle eliminar contactos
+        cy.get("ul")
+            .find('.artdeco-dropdown__trigger--placement-bottom.artdeco-button--circle')
+            .each(function($btn){
+            if ($btn.hasClass('artdeco-button--circle')){
+                cy.wrap($btn).click();
+                cy.get(".artdeco-dropdown__content.artdeco-dropdown--is-dropdown-element.artdeco-dropdown__content--has-arrow.artdeco-dropdown__content--arrow-right.artdeco-dropdown__content--justification-right.artdeco-dropdown__content--placement-bottom.ember-view")
+                    .find(".display-flex.align-items-center.t-14.t-black--light.t-normal")
+                    .click();
+                cy.get(".mv2.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view")
+                    .click();
+            }
+        })
     })
 })
